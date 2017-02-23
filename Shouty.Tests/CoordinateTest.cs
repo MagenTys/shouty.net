@@ -6,7 +6,15 @@ namespace Shouty.Tests
 {
     [TestClass]
     public class CoordinateTest
-    {
+    {       
+    
+        [TestMethod]
+        public void ItShouldCalculateTheDistanceFromItself()
+        {
+            Coordinate a = new Coordinate(0, 0);
+            Assert.AreEqual(a.DistanceFrom(a), 0);
+        }
+        
         [TestMethod]
         public void ItCalculatesTheDistanceFromAnotherCoordinateAlongXAxis()
         {
